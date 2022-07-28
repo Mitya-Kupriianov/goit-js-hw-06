@@ -15,7 +15,10 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 gallery.classList.add("imeg");
-const allPusher = images.map((ingredient) => {
-  const image = `<li><img src ='${ingredient.url}' alt = '${ingredient.alt}' width= '360px'></img></li>`;
-  return gallery.insertAdjacentHTML("beforeend", image);
-});
+const allPusher = images
+  .map(
+    (ingredient) =>
+      `<li><img src ='${ingredient.url}' alt = '${ingredient.alt}' width= '360px'></img></li>`,
+  )
+  .join("");
+gallery.insertAdjacentHTML("beforeend", allPusher);
