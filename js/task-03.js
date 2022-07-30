@@ -18,6 +18,7 @@ gallery.classList.add("imeg");
 const allPusher = images
   .map(
     (ingredient) =>
+      /* html */
       `<li><img src ='${ingredient.url}' alt = '${ingredient.alt}' width= '360px'></img></li>`,
   )
   .join("");
